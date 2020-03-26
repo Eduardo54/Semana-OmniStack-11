@@ -1,0 +1,34 @@
+const express = require('express'); // importando micro-framework de rota sexpress
+
+const app = express();
+
+app.use(express.json());
+
+/**Rota | Recursos
+ * 
+ * Metodos HTTP
+ * Get: busca informacao, Post: cria informacao, Put: altera a informacao,
+ * Delete: deleta a informacao.
+ */
+
+/**Tipos de parametros:
+ * 
+ * Query params: parametros nomeados enviados pela rota após "?" (usado em filtros, paginacao).
+ * Route params: parametros utilizados pra identificar recursos.
+ * Request body: corpo de requesicao, utilizado para criar ou alterar recursos.
+ */
+
+/**Banco de dados
+ * SQL: MySQL, SQlite, postgresSQL, oracle, microsoft SQL server.
+ * NoSQL: MongoDB, CouchDB.
+ * 
+ */
+
+
+
+app.get('/', (Request, Response)=>{
+    return Response.send('Hello World')
+});
+
+app.listen(3333);
+
